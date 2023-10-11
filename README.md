@@ -54,4 +54,3 @@ Preview screen:
 Annotation screen:
 ![Annotation](src/assets/1.png)
 
-
