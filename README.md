@@ -54,3 +54,22 @@ To run an Ionic app, you can follow these single-line steps in your command line
 **Annotation screen:**
 ![Annotation](src/assets/1.png)
 
+
+## Usage
+
+Used **defineCustomElements**:
+This will call the element loader after the platform has been bootstrapped
+```javascript
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
+defineCustomElements(window);
+```
+
+NPM was utilized, leveraging the submodules of `@ionic-native` to attain the desired functionality.
+
+
+
+## 🚀 About Me
+
+I specialize in MEAN (MongoDB, Express.js, Angular, Node.js) stack development.
+**Tweniee***
+
