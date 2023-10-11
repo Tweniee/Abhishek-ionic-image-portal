@@ -39,14 +39,20 @@ To run an Ionic app, you can follow these single-line steps in your command line
 
 
 
+
 ## Demo
 
 Home screen:
 ![Home](src/assets/1.png)
+
 Camera screen:
 ![Camera](src/assets/1.png)
+
 Preview screen:
 ![Preview](src/assets/1.png)
+
 Annotation screen:
 ![Annotation](src/assets/1.png)
+
+
 
