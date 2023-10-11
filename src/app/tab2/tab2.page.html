@@ -1,0 +1,54 @@
+<ion-content [style.display]="!isEdit ? 'block':'none'">
+  <!-- <ion-grid>
+    <ion-row radio-group>
+      <ion-col size="6" *ngFor="let photo of photoService.photos; index as position" text-center>
+        <ion-img [src]="photo.webviewPath"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="addPhotoToGallery()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Abhishek image Drawing
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [forceOverscroll]="false" [style.display]="isEdit ? 'block':'none'">
+  <ion-row>
+    <ion-col *ngFor="let color of colors" [style.background]="color" class="color-block" tappable
+      (click)="selectColor(color)"></ion-col>
+  </ion-row>
+  <ion-radio-group [(ngModel)]="selectedColor">
+    <ion-row>
+      <ion-col *ngFor="let color of colors" class="ion-text-center">
+        <ion-radio [value]="color"></ion-radio>
+      </ion-col>
+    </ion-row>
+  </ion-radio-group>
+
+  <ion-range min="2" max="20" color="primary" [(ngModel)]="lineWidth">
+    <ion-icon size="small" slot="start" name="brush"></ion-icon>
+    <ion-icon slot="end" name="brush"></ion-icon>
+  </ion-range>
+
+  <canvas #imageCanvas (mousedown)="startDrawing($event)" (touchstart)="startDrawing($event)"
+    (touchmove)="moved($event)" (mousemove)="moved($event)" (mouseup)="endDrawing()" (touchend)="endDrawing()"></canvas>
+
+  <ion-button expand="full" (click)="goBack()">
+    <ion-icon slot="start" name="image"></ion-icon>
+    Click Another
+  </ion-button>
+
+  <ion-button expand="full" (click)="exportCanvasImage()">
+    <ion-icon slot="start" name="download"></ion-icon>
+    Export Image
+  </ion-button>
+</ion-content>
