@@ -64,6 +64,9 @@ import { defineCustomElements } from '@ionic/pwa-elements/loader';
 defineCustomElements(window);
 ```
 
+The feature primarily relies on the Tab2 component and the photo service for its implementation.
+
+
 NPM was utilized, leveraging the submodules of `@ionic-native` to attain the desired functionality.
 
 
